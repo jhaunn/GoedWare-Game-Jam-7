@@ -22,9 +22,6 @@ public class Bullet : MonoBehaviour
         {
             if (collision.gameObject.CompareTag("Enemy"))
             {
-                Instantiate(EffectsManager.instance.particles[0], transform.position, Quaternion.identity);
-                EffectsManager.instance.PlaySound(EffectsManager.instance.sounds[1]);
-
                 collision.gameObject.GetComponent<EnemyStats>().Life--;
                 Destroy(gameObject);
             }
@@ -33,9 +30,6 @@ public class Bullet : MonoBehaviour
         {
             if (collision.gameObject.CompareTag("Player"))
             {
-                Instantiate(EffectsManager.instance.particles[0], transform.position, Quaternion.identity);
-                EffectsManager.instance.PlaySound(EffectsManager.instance.sounds[1]);
-
                 collision.gameObject.GetComponent<PlayerStats>().Health--;
                 Destroy(gameObject);
             }

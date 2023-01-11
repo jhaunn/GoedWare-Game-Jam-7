@@ -35,23 +35,12 @@ public class PlayerShoot : MonoBehaviour
         if (currentShootInterval <= 0f)
         {
             currentShootInterval = shootInterval;
-
-            //foreach (Transform shootPoint in shootPoints)
-            //{
-            //    GameObject cur = Instantiate(bullet, shootPoint.position, shootPoint.rotation);
-
-            //    cur.GetComponent<Bullet>().FromPlayer = true;
-            //    cur.GetComponent<Rigidbody2D>().AddForce(shootPoint.up * shootForce, ForceMode2D.Impulse);
-            //    cur.GetComponent<Bullet>().DestroyBullet(bulletLife);
-            //}
-
+            
             GameObject cur = Instantiate(bullet, shootPoints[0].position, shootPoints[0].rotation);
 
             cur.GetComponent<Bullet>().FromPlayer = true;
             cur.GetComponent<Rigidbody2D>().AddForce(shootPoints[0].up * shootForce, ForceMode2D.Impulse);
             cur.GetComponent<Bullet>().DestroyBullet(bulletLife);
-
-            EffectsManager.instance.PlaySound(EffectsManager.instance.sounds[0]);
         }
     }
 

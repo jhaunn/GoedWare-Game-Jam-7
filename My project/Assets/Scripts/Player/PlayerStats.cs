@@ -11,7 +11,6 @@ public class PlayerStats : MonoBehaviour
     private PlayerShoot playerShoot;
     public int Health { get; set; }
     private int initialHealth;
-    [SerializeField] private TextMeshProUGUI healthText;
     private float currentRegenInterval;
 
     private void Awake()
@@ -32,15 +31,12 @@ public class PlayerStats : MonoBehaviour
 
     private void Update()
     {
-        healthText.text = Health.ToString();
-
         if (Health <= 0)
         {
-            EffectsManager.instance.InvokeRestartGame(5f);
-            Destroy(gameObject);
+            Debug.Log("Health is 0");
         }
 
-        if (Health < initialHealth)
+        if (Health < initialHealth && Health != 0)
         {
             RegenHealth();
         }
