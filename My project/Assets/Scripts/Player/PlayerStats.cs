@@ -36,6 +36,8 @@ public class PlayerStats : MonoBehaviour
 
     private void Update()
     {
+        ScoreManager.instance.Health = Health;
+
         if (Health <= 0)
         {
             Debug.Log("Health is 0");
