@@ -50,4 +50,9 @@ public class PlayerShoot : MonoBehaviour
         this.shootForce = shootForce;
         this.bullet = bullet;
     }
+
+    public void SetShootStats(float shootInterval)
+    {
+        this.shootInterval = shootInterval;
+    }
 }

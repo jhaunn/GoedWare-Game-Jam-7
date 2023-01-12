@@ -3377,9 +3377,9 @@ MonoBehaviour:
   qText: {fileID: 1276641861}
   eText: {fileID: 1530769280}
   rText: {fileID: 271130320}
-  qTimer: 3
-  eTimer: 3
-  rTimer: 3
+  qTimer: 5
+  eTimer: 10
+  rTimer: 30
 --- !u!1 &1050091755
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,9 +9,12 @@ public class PlayerStats : MonoBehaviour
 
     private PlayerMovement playerMovement;
     private PlayerShoot playerShoot;
+
     public int Health { get; set; }
     private int initialHealth;
     private float currentRegenInterval;
+
+    public float ShootInterval { get; set; }
 
     private void Awake()
     {
@@ -25,8 +28,10 @@ public class PlayerStats : MonoBehaviour
         initialHealth = Health;
         currentRegenInterval = player.healthRegen;
 
+        ShootInterval = player.shootInterval;
+
         playerMovement.SetMovement(player.moveSpeed);
-        playerShoot.SetShootStats(player.shootInterval, player.shootForce, player.bullet);
+        playerShoot.SetShootStats(ShootInterval, player.shootForce, player.bullet);
     }
 
     private void Update()
@@ -40,8 +45,6 @@ public class PlayerStats : MonoBehaviour
         {
             RegenHealth();
         }
-
-        
     }
 
     private void RegenHealth()
