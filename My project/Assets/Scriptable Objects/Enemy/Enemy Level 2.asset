@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f3949f35dff17449bef531507303398, type: 3}
   m_Name: Enemy Level 2
   m_EditorClassIdentifier: 
-  color: {r: 0.40610537, g: 0.69001484, b: 0.735849, a: 1}
+  color: {r: 0.25490198, g: 0.62352943, b: 0.86666673, a: 1}
   life: 2
   scoreMin: 5
   scoreMax: 7
