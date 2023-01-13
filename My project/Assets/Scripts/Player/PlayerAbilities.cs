@@ -19,6 +19,9 @@ public class PlayerAbilities : MonoBehaviour
     private float currentETimer;
     private float currentRTimer;
 
+    [SerializeField] private float qShootInterval;
+    [SerializeField] private float rRadius;
+
     private void Awake()
     {
         playerStats = GetComponent<PlayerStats>();
@@ -72,23 +75,42 @@ public class PlayerAbilities : MonoBehaviour
         {
             currentQTimer = qTimer;
 
-            playerShoot.SetShootStats(0.1f);
+            playerShoot.SetShootStats(qShootInterval);
             Invoke("ResetQ", 2f);
         }
 
         if (Input.GetKeyDown(KeyCode.E) && currentETimer <= 0f)
         {
             currentETimer = eTimer;
+
+            playerStats.Health++;
         }
 
         if (Input.GetKeyDown(KeyCode.R) && currentRTimer <= 0f)
         {
             currentRTimer = rTimer;
+
+            Collider2D[] enemies = Physics2D.OverlapCircleAll(transform.position, rRadius);
+
+            foreach (Collider2D enemy in enemies)
+            {
+                if (enemy.GetComponent<EnemyStats>())
+                {
+                    enemy.GetComponent<EnemyStats>().Life = 0;
+                }
+            }
         }
     }
 
     private void ResetQ()
     {
         playerShoot.SetShootStats(playerStats.ShootInterval);
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.green;
+
+        Gizmos.DrawWireSphere(transform.position, rRadius);
     }
 }
