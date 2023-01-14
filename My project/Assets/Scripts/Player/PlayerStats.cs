@@ -40,7 +40,9 @@ public class PlayerStats : MonoBehaviour
 
         if (Health <= 0)
         {
-            Debug.Log("Health is 0");
+            Debug.Log("Game restarting");
+            EffectsManager.instance.SetRestartGame(3f);
+            Destroy(gameObject);
         }
 
         if (Health < initialHealth && Health != 0)
