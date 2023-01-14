@@ -48,24 +48,24 @@ public class PlayerAbilities : MonoBehaviour
 
     private void UpdateAbilitiesText()
     {
-        qText.text = $"Q\n{currentQTimer.ToString("0.0")}";
-        eText.text = $"E\n{currentETimer.ToString("0.0")}";
-        rText.text = $"R\n{currentRTimer.ToString("0.0")}";
+        qText.text = $"Q-Rapid\n{currentQTimer.ToString("0.0")}";
+        eText.text = $"E-Heal\n{currentETimer.ToString("0.0")}";
+        rText.text = $"R-Instakill\n{currentRTimer.ToString("0.0")}";
 
 
         if (currentQTimer <= 0f)
         {
-            qText.text = $"Q\nReady";
+            qText.text = $"Q-Rapid\nReady";
         }
 
         if (currentETimer <= 0f)
         {
-            eText.text = $"E\nReady";
+            eText.text = $"E-Heal\nReady";
         }
 
         if (currentRTimer <= 0f)
         {
-            rText.text = $"R\nReady";
+            rText.text = $"R-Instakill\nReady";
         }
     }
 
