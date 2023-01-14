@@ -17,4 +17,4 @@ MonoBehaviour:
   health: 3
   shootInterval: 1
   shootForce: 12.5
-  moveSpeed: 4.5
+  moveSpeed: 4

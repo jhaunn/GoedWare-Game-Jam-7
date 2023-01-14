@@ -28,6 +28,6 @@ public class ScoreManager : MonoBehaviour
     private void Update()
     {
         scoreText.text = Score.ToString();
-        healthText.text = Health.ToString();
+        healthText.text = $"Health\n{Health.ToString()}";
     }
 }

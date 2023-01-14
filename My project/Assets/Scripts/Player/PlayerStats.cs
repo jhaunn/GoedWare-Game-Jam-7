@@ -41,6 +41,7 @@ public class PlayerStats : MonoBehaviour
         if (Health <= 0)
         {
             Debug.Log("Game restarting");
+            SoundManager.instance.PlayAudio(SoundManager.instance.Sounds[0]);
             EffectsManager.instance.SetRestartGame(3f);
             Destroy(gameObject);
         }

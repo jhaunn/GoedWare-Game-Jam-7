@@ -16,7 +16,6 @@ public class Bullet : MonoBehaviour
         if (collision.gameObject.CompareTag("Wall"))
         {
             Destroy(gameObject);
-            Instantiate(EffectsManager.instance.Particles[1], transform.position, transform.rotation);
         }
 
         if (FromPlayer)
@@ -26,6 +25,7 @@ public class Bullet : MonoBehaviour
                 collision.gameObject.GetComponent<EnemyStats>().Life--;
                 Destroy(gameObject);
                 Instantiate(EffectsManager.instance.Particles[1], transform.position, transform.rotation);
+                SoundManager.instance.PlayAudio(SoundManager.instance.Sounds[2]);
             }
         }
         else
@@ -35,6 +35,7 @@ public class Bullet : MonoBehaviour
                 collision.gameObject.GetComponent<PlayerStats>().Health--;
                 Destroy(gameObject);
                 Instantiate(EffectsManager.instance.Particles[1], transform.position, transform.rotation);
+                SoundManager.instance.PlayAudio(SoundManager.instance.Sounds[2]);
             }
         }
 
