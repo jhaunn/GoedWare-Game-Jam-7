@@ -35,6 +35,7 @@ public class EnemyStats : MonoBehaviour
         {
             EnemySpawner.instance.CurrentEnemies--;
             ScoreManager.instance.Score += Score;
+            Instantiate(EffectsManager.instance.Particles[2], transform.position, transform.rotation);
             Destroy(gameObject);
         }
     }

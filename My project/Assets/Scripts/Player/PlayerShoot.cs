@@ -41,6 +41,7 @@ public class PlayerShoot : MonoBehaviour
             cur.GetComponent<Bullet>().FromPlayer = true;
             cur.GetComponent<Rigidbody2D>().AddForce(shootPoints[0].up * shootForce, ForceMode2D.Impulse);
             cur.GetComponent<Bullet>().DestroyBullet(bulletLife);
+            Instantiate(EffectsManager.instance.Particles[0], shootPoints[0].transform.position, shootPoints[0].transform.rotation);
         }
     }
 
