@@ -158,8 +158,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 750, y: 100}
-  m_SizeDelta: {x: 200, y: 200}
+  m_AnchoredPosition: {x: 850, y: 100}
+  m_SizeDelta: {x: 300, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &271130320
 MonoBehaviour:
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'R - Instakill
+  m_text: 'R - Instaclear
 
     Ready'
   m_isRightToLeft: 0
@@ -1085,7 +1085,7 @@ MonoBehaviour:
   rText: {fileID: 271130320}
   qTimer: 5
   eTimer: 10
-  rTimer: 30
+  rTimer: 60
   qShootInterval: 0.1
   rRadius: 16
 --- !u!1 &1142785522
@@ -1195,7 +1195,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 250, y: 100}
-  m_SizeDelta: {x: 200, y: 200}
+  m_SizeDelta: {x: 300, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1276641861
 MonoBehaviour:
@@ -1217,7 +1217,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Q - Rapid
+  m_text: 'Q - Rapid Fire
 
     Ready'
   m_isRightToLeft: 0
@@ -53489,7 +53489,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: df9d82179c9b12d4d951b73985cf9a7c, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -53585,7 +53585,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.15
+  m_Volume: 0.35
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -53721,8 +53721,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 500, y: 100}
-  m_SizeDelta: {x: 200, y: 200}
+  m_AnchoredPosition: {x: 550, y: 100}
+  m_SizeDelta: {x: 300, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1530769280
 MonoBehaviour:
@@ -53744,7 +53744,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'E - Heal
+  m_text: 'E - Stack Heal
 
     Ready'
   m_isRightToLeft: 0
@@ -54094,8 +54094,8 @@ MonoBehaviour:
   - {fileID: 2733898975470893283, guid: 95bcd4f8b68bc44468b57ddbf77a1151, type: 3}
   minArea: {x: -35, y: -35}
   maxArea: {x: 35, y: 35}
-  maxEnemies: 100
-  spawnInterval: 2
+  maxEnemies: 299
+  spawnInterval: 1.5
 --- !u!4 &1843130871
 Transform:
   m_ObjectHideFlags: 0

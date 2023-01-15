@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 5825418591855664001, guid: b3dd66a4e3df3c74db90522140007456, type: 3}
   healthRegen: 3
-  health: 3
+  health: 5
   shootInterval: 1
   shootForce: 12.5
   moveSpeed: 4

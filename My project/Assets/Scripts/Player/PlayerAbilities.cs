@@ -48,24 +48,24 @@ public class PlayerAbilities : MonoBehaviour
 
     private void UpdateAbilitiesText()
     {
-        qText.text = $"Q-Rapid\n{currentQTimer.ToString("0.0")}";
-        eText.text = $"E-Heal\n{currentETimer.ToString("0.0")}";
-        rText.text = $"R-Instakill\n{currentRTimer.ToString("0.0")}";
+        qText.text = $"Q - Rapid Fire\n{currentQTimer.ToString("0.0")}";
+        eText.text = $"E - Stack Heal\n{currentETimer.ToString("0.0")}";
+        rText.text = $"R - Instaclear\n{currentRTimer.ToString("0.0")}";
 
 
         if (currentQTimer <= 0f)
         {
-            qText.text = $"Q-Rapid\nReady";
+            qText.text = $"Q - Rapid Fire\nReady";
         }
 
         if (currentETimer <= 0f)
         {
-            eText.text = $"E-Heal\nReady";
+            eText.text = $"E - Stack Heal\nReady";
         }
 
         if (currentRTimer <= 0f)
         {
-            rText.text = $"R-Instakill\nReady";
+            rText.text = $"R - Instaclear\nReady";
         }
     }
 
@@ -97,6 +97,11 @@ public class PlayerAbilities : MonoBehaviour
                 if (enemy.GetComponent<EnemyStats>())
                 {
                     enemy.GetComponent<EnemyStats>().Life = 0;
+                }
+
+                if (enemy.GetComponent<Bullet>())
+                {
+                    enemy.GetComponent<Bullet>().DestroyBullet(0f);
                 }
             }
         }
